@@ -23,7 +23,13 @@ class App extends Component {
           flats={this.state.flats}
           selectedFlat={this.state.selectedFlat}
           selectFlat={this.selectFlat} />
-        <div className="map-container"> <Map selectedFlat={this.state.selectedFlat} selectFlat={this.selectFlat} /></div>
+        <div className="map-container">
+          <Map
+            selectedFlat={this.state.selectedFlat}
+            selectFlat={this.selectFlat}
+            flats={this.state.flats}
+          />
+        </div>
       </div>
     );
   }
