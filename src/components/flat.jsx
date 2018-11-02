@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 
 class Flat extends Component {
+
+  handleClick = () => {
+      this.props.selectFlat(this.props.index);
+  }
+
   render() {
 
     const styles = {
@@ -10,10 +15,10 @@ class Flat extends Component {
     }
 
     return (
-        <div className="card" style={styles}>
+        <div className="card" style={styles} onClick={this.handleClick}>
           <div className="card-category">{this.props.flat.price} {this.props.flat.priceCurrency}</div>
           <div className="card-description">
-            <h2>{this.props.flat.name}}</h2>
+            <h2>{this.props.flat.name}</h2>
           </div>
           <a className="card-link" href="#"></a>
         </div>
